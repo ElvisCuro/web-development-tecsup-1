@@ -64,12 +64,13 @@
             </a>
           </li>
           <li>
-            <a href="#">Contáctenos</a>
+            <a href="#contact">Contáctenos</a>
           </li>
         </ul>
       </div>
     </nav>
   </header>
+  <hr />
   <main>
     <article id="profile">
       <div>
@@ -88,6 +89,7 @@
         <img src="./img/hero-professional.svg" alt="Profesional de portada" width="256" height="256" />
       </div>
     </article>
+    <hr />
     <section id="experiences">
       <div>
         <h2>Experiencia</h2>
@@ -176,6 +178,65 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </section>
+    <hr />
+    <section id="contact">
+      <div>
+        <h2>Contáctenos</h2>
+        <form>
+          <input type="text" name="name" id="name" placeholder="Nombre" required />
+          <br />
+          <br />
+          <input type="email" name="email" id="email" placeholder="Correo" minlength="5" maxlength="256" required />
+          <br />
+          <br />
+          <input type="number" name="phone" id="phone" placeholder="Celular" min="900000000" max="999999999" required />
+          <br />
+          <br />
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Mensaje" maxlength="256"
+            required></textarea>
+          <br />
+          <br />
+          <select name="dream" id="dream" required>
+            <option value="">--- Sueño a realizar ---</option>
+            <option value="web-page">Página Web</option>
+            <option value="landing-page">Landing Page</option>
+            <option value="e-commerce">e-commerce</option>
+            <option value="e-learning">e-learning</option>
+            <option value="blog">Blog</option>
+            <option value="portfolio">Portafolio</option>
+            <option value="admin-dashboard">Admin Dashboard</option>
+            <option value="application">Aplicación</option>
+          </select>
+          <br />
+          <h3>Plan de desarrollo</h3>
+          <input type="radio" name="plan" id="premium" value="premium" required />
+          <label for="premium">Premium</label>
+          <input type="radio" name="plan" id="business" value="business" required />
+          <label for="business">Empresarial</label>
+          <input type="radio" name="plan" id="pyme" value="pyme" required />
+          <label for="pyme">PYME</label>
+          <input type="radio" name="plan" id="professional" value="professional" required />
+          <label for="professional">Profesional</label>
+          <input type="radio" name="plan" id="medium" value="medium" required />
+          <label for="medium">Medio</label>
+          <input type="radio" name="plan" id="basic" value="basic" required />
+          <label for="basic">Básico</label>
+          <br />
+          <h3>Tecnologías adicionales</h3>
+          <input type="checkbox" name="seo" id="seo" />
+          <label for="seo">SEO</label>
+          <input type="checkbox" name="whatsapp" id="whatsapp" />
+          <label for="whatsapp">WhatsApp</label>
+          <input type="checkbox" name="self-administered" id="administered" />
+          <label for="administered">Administrable</label>
+          <input type="checkbox" name="nextjs" id="nextjs" />
+          <label for="nextjs">Next.js</label>
+          <br />
+          <br />
+          <input type="submit" value="Registrar sueño" />
+        </form>
       </div>
     </section>
   </main>
