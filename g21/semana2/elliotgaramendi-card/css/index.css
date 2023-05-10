@@ -46,6 +46,12 @@ h2 {
   font-size: 14px;
 }
 
+h2,
+span {
+  font-weight: 400;
+  color: #bbb;
+}
+
 p {
   font-size: 12px;
 }
@@ -56,6 +62,12 @@ ul {
   list-style: none;
   display: flex;
   gap: 16px;
+}
+
+.skill {
+  background-color: #087ea4;
+  padding: 4px 16px;
+  border-radius: 16px;
 }
 
 a {
