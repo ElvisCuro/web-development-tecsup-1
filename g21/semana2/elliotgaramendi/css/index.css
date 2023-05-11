@@ -4,3 +4,58 @@
   color: white;
   font-family: monospace;
 }
+
+.header {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.flexbox--header {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img {
+  display: block;
+}
+
+.img--logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.gap-2xs {
+  gap: 0.5rem;
+}
