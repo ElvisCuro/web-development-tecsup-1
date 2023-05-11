@@ -1,3 +1,6 @@
-body {
-  background-color: dodgerblue;
+.body {
+  margin: 0;
+  background-image: url('../img/hero-background.png');
+  color: white;
+  font-family: monospace;
 }
