@@ -1,11 +1,16 @@
 .body {
   margin: 0;
-  background-image: url('../img/hero-background.png');
+  /* background-image: conic-gradient(from 90deg at -10% 100%, #2b303b 0deg, #2b303b 90deg, #16181d 1turn); */
+  background-color: #16181d;
   color: white;
   font-family: monospace;
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -23,6 +28,14 @@
 
 .flexbox {
   display: flex;
+}
+
+.g-layout {
+  display: grid;
+}
+
+.g-layout--1-1 {
+  grid-template-columns: 1fr 1fr;
 }
 
 .flexbox--header {
@@ -50,6 +63,15 @@
   text-decoration: none;
   color: white;
   font-size: 1rem;
+}
+
+.hero {
+  min-height: 100vh;
+  background-image: url('../img/hero-background.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
 }
 
 .d-flex {
