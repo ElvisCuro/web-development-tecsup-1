@@ -6,7 +6,7 @@
 }
 
 .header {
-  box-shadow: 0 0 0.5rem 0 rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0.25rem 0 rgba(255, 255, 255, 0.5);
 }
 
 .nav {
@@ -46,7 +46,7 @@
 }
 
 .link:hover {
-  color: #087ea4;
+  color: #149eca;
 }
 
 .flexbox {
