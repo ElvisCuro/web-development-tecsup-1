@@ -70,3 +70,24 @@
 .gap-xs {
   gap: 1rem;
 }
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.g-layout {
+  display: grid;
+}
+
+.g-layout--1-1 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .g-layout--1-1 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
