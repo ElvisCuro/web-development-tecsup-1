@@ -17,6 +17,18 @@
 .nav {
   padding-top: 1rem;
   padding-bottom: 1rem;
+  --i-menu: 1;
+  --i-close: 0;
+}
+
+#menu:target {
+  --i-menu: 0;
+  --i-close: 1;
+}
+
+#menu:target .list--menu {
+  opacity: 1;
+  pointer-events: initial;
 }
 
 .container {
@@ -67,11 +79,6 @@
   left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   transition: opacity 0.25s;
-}
-
-.list--menu:target {
-  opacity: 1;
-  pointer-events: initial;
 }
 
 @media (min-width: 768px) {
@@ -156,6 +163,20 @@
   font-size: 1.5rem;
   color: white;
   text-decoration: none;
+}
+
+.icon--menu {
+  transform: scale(var(--i-menu));
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.25s;
+}
+
+.icon--close {
+  transform: scale(var(--i-close));
+  position: absolute;
+  right: 1rem;
+  transition: transform 0.25s;
 }
 
 .icon--lg {
