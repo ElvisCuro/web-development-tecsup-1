@@ -1,5 +1,6 @@
 @import './modules/variables/variables.css';
 @import './modules/layouts/container.css';
+@import './modules/layouts/flexbox.css';
 @import './modules/components/header.css';
 @import './modules/components/nav.css';
 
@@ -199,30 +200,6 @@
 @media (min-width: 768px) {
   .button {
     font-size: 1rem;
-  }
-}
-
-.flexbox {
-  display: flex;
-}
-
-.flexbox--header {
-  align-items: center;
-  justify-content: space-between;
-}
-
-.flexbox--responsive {
-  flex-direction: column;
-}
-
-.flexbox--center {
-  align-items: center;
-  justify-content: center;
-}
-
-@media (min-width: 768px) {
-  .flexbox--responsive {
-    flex-direction: row;
   }
 }
 
