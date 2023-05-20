@@ -1,4 +1,4 @@
 .nav {
-  padding-top: var(--primary-spacing);
-  padding-bottom: var(--primary-spacing);
+  padding-top: calc(var(--primary-spacing) / 2);
+  padding-bottom: calc(var(--primary-spacing) / 2);
 }
