@@ -1,4 +1,5 @@
 @import './modules/variables/variables.css';
+@import './modules/layouts/container.css';
 @import './modules/components/header.css';
 @import './modules/components/nav.css';
 
@@ -12,13 +13,6 @@
 .section {
   padding-top: var(--primary-spacing);
   padding-bottom: var(--primary-spacing);
-}
-
-.container {
-  max-width: 1024px;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin: auto;
 }
 
 .title {
