@@ -1,6 +1,7 @@
 @import './modules/variables/variables.css';
 @import './modules/layouts/container.css';
 @import './modules/layouts/flexbox.css';
+@import './modules/layouts/grid-layout.css';
 @import './modules/components/header.css';
 @import './modules/components/nav.css';
 @import './modules/components/hero.css';
