@@ -1,5 +1,6 @@
 @import './modules/variables/variables.css';
+@import './modules/components/header.css';
 
 .body {
-  background-color: var(--primary-main-color);
+  background-color: var(--primary-background-color);
 }
