@@ -1,4 +1,5 @@
 :root {
+  --primary-spacing: 1.5rem;
   --primary-main-color: #006341;
   --primary-background-color: white;
   --primary-text-color: black;
