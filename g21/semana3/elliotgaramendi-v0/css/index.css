@@ -1,19 +1,11 @@
 @import './modules/variables/variables.css';
+@import './modules/components/header.css';
 
 .body {
   margin: 0;
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   font-family: var(--primary-font-family);
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--light-primary-shadow-color);
-  box-shadow: 0 0 0.5rem 0 var(--dark-primary-shadow-color);
 }
 
 .nav {
