@@ -1,0 +1,11 @@
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: 0.25s color;
+}
+
+.link:hover {
+  color: var(--primary-main-color);
+}
