@@ -6,12 +6,12 @@
   padding-bottom: var(--nav-padding);
 }
 
-#nav:target {
+.nav:target {
   --i-menu: 0;
   --i-close: 1;
 }
 
-#nav:target .list--menu {
+.nav:target .list--menu {
   opacity: 1;
   pointer-events: initial;
 }
