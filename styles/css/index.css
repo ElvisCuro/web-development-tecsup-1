@@ -24,4 +24,26 @@
   font-family: var(--primary-font-family);
 }
 
+.header {
+  box-shadow: 0 0 0.125rem 0.0625rem var(--dark-primary-shadow-color);
+}
+
+.header-nav {
+  padding-top: var(--primary-spacing);
+  padding-bottom: var(--primary-spacing);
+}
+.header-nav__logo {
+  background-color: red;
+}
+.header-nav button {
+  background-color: royalblue;
+}
+
+.container {
+  max-width: var(--primary-max-width);
+  padding-right: calc(var(--primary-spacing) / 2);
+  padding-left: calc(var(--primary-spacing) / 2);
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=index.css.map */
