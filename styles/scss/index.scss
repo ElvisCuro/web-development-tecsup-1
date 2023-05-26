@@ -1,3 +1,5 @@
+@import './modules/components/header';
+
 :root {
   scroll-behavior: smooth;
   --primary-max-width: 512px;
@@ -23,10 +25,6 @@
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
   font-family: var(--primary-font-family);
-}
-
-.header {
-  box-shadow: 0 0 0.125rem 0.0625rem var(--dark-primary-shadow-color);
 }
 
 .header-nav {
