@@ -1,0 +1,27 @@
+:root {
+  scroll-behavior: smooth;
+  --primary-max-width: 512px;
+  --primary-spacing: 1.5rem;
+  --primary-main-color: #149eca;
+  --primary-background-color: #16181d;
+  --secondary-background-color: #2b303b;
+  --primary-text-color: white;
+  --light-primary-shadow-color: rgba(0, 0, 0, 0.5);
+  --dark-primary-shadow-color: rgba(255, 255, 255, 0.5);
+  --primary-font-family: "Source Code Pro", monospace;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --primary-max-width: 1024px;
+    --primary-spacing: 2rem;
+  }
+}
+.body {
+  margin: 0;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  font-family: var(--primary-font-family);
+}
+
+/*# sourceMappingURL=index.css.map */
