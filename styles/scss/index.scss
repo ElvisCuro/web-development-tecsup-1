@@ -1,3 +1,4 @@
+@import './modules/mixins/mixins';
 @import './modules/components/header';
 
 :root {
@@ -31,12 +32,24 @@
   padding-top: var(--primary-spacing);
   padding-bottom: var(--primary-spacing);
 
+  &__container {
+    @include flexbox(row, center, space-between);
+  }
+
   &__logo {
     background-color: red;
+
+    @include desktop {
+      background-color: royalblue;
+    }
   }
 
   button {
     background-color: royalblue;
+
+    @include desktop {
+      background-color: green;
+    }
   }
 }
 

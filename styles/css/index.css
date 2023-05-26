@@ -1,6 +1,13 @@
 .header {
   box-shadow: 0 0 0.125rem 0.0625rem var(--dark-primary-shadow-color);
 }
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 2rem;
+}
 
 :root {
   scroll-behavior: smooth;
@@ -32,11 +39,28 @@
   padding-top: var(--primary-spacing);
   padding-bottom: var(--primary-spacing);
 }
+.header-nav__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+}
 .header-nav__logo {
   background-color: red;
 }
+@media (min-width: 768px) {
+  .header-nav__logo {
+    background-color: royalblue;
+  }
+}
 .header-nav button {
   background-color: royalblue;
+}
+@media (min-width: 768px) {
+  .header-nav button {
+    background-color: green;
+  }
 }
 
 .container {
