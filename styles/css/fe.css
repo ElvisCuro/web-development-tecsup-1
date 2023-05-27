@@ -5,6 +5,7 @@
   --primary-background-color: #16181d;
   --secondary-background-color: #2b303b;
   --primary-text-color: white;
+  --primary-shadow-color: rgba(255, 255, 255, 0.5);
   --light-primary-shadow-color: rgba(0, 0, 0, 0.5);
   --dark-primary-shadow-color: rgba(255, 255, 255, 0.5);
   --primary-font-family: "Source Code Pro", monospace;
@@ -15,6 +16,9 @@
     --primary-max-width: 1024px;
     --primary-spacing: 2rem;
   }
+}
+.header {
+  box-shadow: 0 0 0.125rem 0.0625rem var(--primary-shadow-color);
 }
 
 /*# sourceMappingURL=fe.css.map */
