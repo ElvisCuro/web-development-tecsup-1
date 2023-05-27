@@ -46,5 +46,13 @@
   align-items: center;
   justify-content: space-between;
 }
+.flexbox--responsive {
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .flexbox--responsive {
+    flex-direction: row;
+  }
+}
 
 /*# sourceMappingURL=fe.css.map */
