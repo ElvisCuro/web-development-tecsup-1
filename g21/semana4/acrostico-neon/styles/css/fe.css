@@ -2,6 +2,14 @@
   --primary-main-color: deeppink;
   --primary-background-color: #16181d;
   --primary-text-color: white;
+  --primary-font-family: monospace;
+}
+
+.body {
+  margin: 0;
+  background-image: radial-gradient(var(--primary-background-color), var(--primary-main-color));
+  color: var(--primary-text-color);
+  font-family: var(--primary-font-family);
 }
 
 /*# sourceMappingURL=fe.css.map */
