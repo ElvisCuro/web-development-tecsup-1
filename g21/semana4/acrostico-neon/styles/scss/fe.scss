@@ -5,16 +5,25 @@
 }
 
 :root {
+  scroll-behavior: smooth;
+  --primary-max-width: 512px;
+  --primary-main-spacing: 1.5rem;
   --primary-main-color: deeppink;
+  --primary-info-color: #087ea4;
   --primary-background-color: #16181d;
   --primary-text-color: white;
-  --primary-font-family: monospace;
   --letter-color-1: dodgerblue;
   --letter-color-2: crimson;
   --letter-color-3: coral;
   --letter-color-4: gold;
   --letter-color-5: darkmagenta;
   --letter-color-6: cyan;
+  --primary-font-family: monospace;
+
+  @media (min-width: 768px) {
+    --primary-max-width: 1024px;
+    --primary-main-spacing: 2rem;
+  }
 }
 
 .hero {
@@ -32,7 +41,7 @@
     color: inherit;
     text-decoration: none;
     animation: beat 1s ease-in-out 0s infinite alternate;
-    
+
     @media (min-width: 768px) {
       gap: 0.75rem;
       font-size: 5rem;
@@ -87,4 +96,46 @@
       filter: blur(0.125rem);
     }
   }
+}
+
+.acrostic {
+  padding-top: var(--primary-main-spacing);
+  padding-bottom: var(--primary-main-spacing);
+  background-image: radial-gradient(transparent, var(--primary-main-color));
+
+  &__stanza {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--primary-main-spacing) / 2);
+    list-style: none;
+  }
+
+  &__verse {
+    font-size: 1rem;
+    font-weight: 700;
+    text-shadow:
+      0 0 0.125rem var(--primary-info-color),
+      0 0 0.25rem var(--primary-info-color);
+
+    &::first-letter {
+      font-size: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 1.25rem;
+
+      &::first-letter {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+.container {
+  max-width: var(--primary-max-width);
+  padding-right: calc(var(--primary-main-spacing) / 2);
+  padding-left: calc(var(--primary-main-spacing) / 2);
+  margin: 0 auto;
 }
