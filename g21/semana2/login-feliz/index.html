@@ -11,6 +11,17 @@
   <h1>Login Feliz</h1>
   <script>
     alert('Login feliz');
+
+    let user = 'admin';
+    let password = '123456';
+    let userEntered = prompt('Usuario');
+    let passwordEntered = prompt('Contraseña');
+
+    if (user == userEntered && password == passwordEntered) {
+      alert('Bienvenido');
+    } else {
+      alert('Credenciales incorrectas');
+    }
   </script>
 </body>
 
