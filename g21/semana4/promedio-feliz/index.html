@@ -25,12 +25,18 @@
       }
     };
 
-    let note1 = +prompt('Ingrese nota 1');
-    let note2 = +prompt('Ingrese nota 2');
-    let note3 = +prompt('Ingrese nota 3');
+    let response = '1';
 
-    let average = averageNotes(note1, note2, note3);
-    alert(`Promedio final: ${average} usted a ${courseStatus(average)}`);
+    while (response == '1') {
+      let note1 = +prompt('Ingrese nota 1');
+      let note2 = +prompt('Ingrese nota 2');
+      let note3 = +prompt('Ingrese nota 3');
+
+      let average = averageNotes(note1, note2, note3);
+      alert(`Promedio final: ${average} usted a ${courseStatus(average)}`);
+
+      response = prompt('¿Usted desea promediar más notas? Sí (1) No (Otra tecla)');
+    }
   </script>
 </body>
 
