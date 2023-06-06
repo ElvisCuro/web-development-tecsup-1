@@ -1,10 +1,11 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log(document.querySelector('.header'));
-  console.log(document.querySelector('.nav'));
+  const header = document.querySelector('.header');
+  const nav = document.querySelector('.nav');
 
   document.addEventListener('scroll', () => {
-    console.log('Arena')
+    header.classList.toggle('header--scroll', window.scrollY > 0);
+    nav.classList.toggle('nav--scroll', window.scrollY > 0);
   });
 });

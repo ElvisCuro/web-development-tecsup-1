@@ -19,12 +19,24 @@
   }
 }
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: box-shadow 0.25s;
+}
+.header--scroll {
   box-shadow: 0 0 0.125rem 0.0625rem var(--primary-shadow-color);
 }
 
 .nav {
-  padding-top: calc(var(--primary-spacing) / 2);
-  padding-bottom: calc(var(--primary-spacing) / 2);
+  padding-top: calc(var(--primary-spacing) * 0.75);
+  padding-bottom: calc(var(--primary-spacing) * 0.75);
+  transition: padding 0.25s;
+}
+.nav--scroll {
+  padding-top: calc(var(--primary-spacing) * 0.5);
+  padding-bottom: calc(var(--primary-spacing) * 0.5);
 }
 
 .list {
