@@ -101,5 +101,5 @@ export const memes = [
     "imagen": "https://i.ytimg.com/vi/Ni4A-6hF4wA/maxresdefault.jpg",
     "enlace":
       "https://c.tenor.com/werGAdQw-8sAAAAd/neta-me-lo-juras-nodding.gif",
-  },
+  }
 ];
