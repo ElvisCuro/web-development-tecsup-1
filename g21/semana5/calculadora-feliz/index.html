@@ -14,13 +14,13 @@
     <section class="d-flex align-items-center" style="min-height: 100vh;">
       <div class="container">
         <h1 class="text-info text-center">Calculadora Feliz</h1>
-        <form class="py-2" id="calculatorForm">
+        <form class="py-2" name="formularioDeCalculo" id="comida">
           <div class="form-floating mb-3">
-            <input type="number" name="number1" class="form-control" id="number1" placeholder="Numero 1" required />
+            <input type="number" name="number1" class="form-control" placeholder="Numero 1" required />
             <label for="number1">Número 1</label>
           </div>
           <div class="form-floating mb-3">
-            <select class="form-select" id="operator" aria-label="Operador" required>
+            <select class="form-select" name="operator" aria-label="Operador" required>
               <option selected value="">Seleccionar opción</option>
               <option value="+">+</option>
               <option value="-">-</option>
@@ -30,7 +30,7 @@
             <label for="operator">Operador</label>
           </div>
           <div class="form-floating mb-3">
-            <input type="number" name="number2" class="form-control" id="number2" placeholder="Numero 2" required />
+            <input type="number" name="number2" class="form-control" placeholder="Numero 2" required />
             <label for="number2">Número 2</label>
           </div>
           <button type="submit" class="btn btn-primary w-100 mb-3">Calcular</button>

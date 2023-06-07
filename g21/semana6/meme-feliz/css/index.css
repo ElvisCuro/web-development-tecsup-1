@@ -54,10 +54,20 @@
   top: 0;
   left: 0;
   width: 100%;
+  transition: background-color 0.25s;
+}
+
+.header--scroll {
+  background-color: var(--primary-shadow-color);
 }
 
 .header-nav {
   padding: 0.5em 0;
+  transition: padding 0.25s;
+}
+
+.header-nav--scroll {
+  padding: 0.25em 0;
 }
 
 .header-nav__container {

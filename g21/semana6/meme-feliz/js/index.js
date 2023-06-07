@@ -3,6 +3,14 @@
 import { memes } from "../utils/memes.js";
 
 document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.header');
+  const headerNav = document.querySelector('.header-nav');
+
+  document.addEventListener('scroll', () => {
+    header.classList.toggle('header--scroll', window.scrollY > 0);
+    headerNav.classList.toggle('header-nav--scroll', window.scrollY > 0);
+  });
+
   const memesBuscador = document.getElementById('memesBuscador');
   const memesMemeContainer = document.getElementById('memesMemeContainer');
 
