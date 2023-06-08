@@ -1,12 +1,12 @@
 'use strict';
-
 import { memes } from "../utils/memes.js";
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
+  console.log('listo');
   const header = document.querySelector('.header');
   const headerNav = document.querySelector('.header-nav');
 
-  document.addEventListener('scroll', () => {
+  window.addEventListener('scroll', () => {
     header.classList.toggle('header--scroll', window.scrollY > 0);
     headerNav.classList.toggle('header-nav--scroll', window.scrollY > 0);
   });

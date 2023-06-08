@@ -356,11 +356,14 @@
 .memes__meme-image-container {
   display: flex;
   margin: 0;
+  height: 240px;
   overflow: hidden;
 }
 
 .memes__meme-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   transition: var(--all-transitions);
 }
 
@@ -369,6 +372,7 @@
 }
 
 .memes__meme-title {
+  height: 110px;
   font-size: 2rem;
   text-align: center;
   padding: 0 1rem;

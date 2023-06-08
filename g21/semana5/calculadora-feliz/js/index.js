@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', () => {
   const calculatorForm = document.forms['formularioDeCalculo'];
   // const calculatorForm = document.getElementById('calculatorForm');
 
