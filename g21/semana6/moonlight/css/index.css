@@ -163,24 +163,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
   max-width: var(--max-width-container);
   margin: auto;
   padding: var(--padding-container);
 }
 
 .hero__title {
-  font-size: 3rem;
-  white-space: nowrap;
+  position: relative;
+  top: 0;
+  left: 50%;
   z-index: 5;
-  margin: 0 0 0 45%;
+  font-size: 2.5rem;
+  white-space: nowrap;
 }
 
 .hero__learn-button {
   position: absolute;
   z-index: 5;
-  top: 50%;
+  top: 55%;
   left: 50%;
-  transform: translate(-50%, 75%);
+  transform: translate(-50%, 0);
   background-color: var(--button-color);
   border-radius: var(--border-radius);
   color: var(--button-text-color);
