@@ -1,5 +1,9 @@
 'use strict';
 
+const deletePokemon = (id) => {
+  alert(id);
+};
+
 window.addEventListener('DOMContentLoaded', () => {
   const pokemonTBody = document.getElementById('pokemonTBody');
   const pokemonForm = document.forms['pokemonForm'];
@@ -35,6 +39,9 @@ window.addEventListener('DOMContentLoaded', () => {
           <td>
             <img src="${image}" alt="Charmander" width="32"
               height="32" />
+          </td>
+          <td>
+            <button class="btn btn-outline-danger btn-sm" onClick=deletePokemon(${index})>❌</button>
           </td>
         </tr>
       `;
