@@ -1,24 +1,43 @@
-body {
+.body {
   min-height: 100vh;
   margin: 0;
-  background-image: url('https://i.postimg.cc/Gp3ysBfq/react-system.webp');
+  background-image: url('https://i.postimg.cc/x9MyhM3D/react-system.webp');
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   color: white;
   font-family: monospace;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-main {
+.section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.section__title {
+  margin: 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.container {
+  max-width: 1024px;
+  padding-left: 1rem;
+  padding-left: 1rem;
+  margin: 0 auto;
+}
+
+.card {
   max-width: 320px;
-  padding: 16px;
-  margin: 16px;
-  background-color: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(32px);
   box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.5);
   border-radius: 16px;
+  overflow: hidden;
+}
+
+.card__body {
+  padding: 16px;
+  background-color: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(32px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,42 +45,33 @@ main {
   gap: 8px;
 }
 
-img {
+.card__img {
   display: block;
   border-radius: 50%;
   box-shadow: 0 0 8px 0 rgba(255, 255, 255, 0.5);
 }
 
-h1,
-h2,
-p {
+.card__title {
   margin: 0;
-}
-
-h1 {
   font-size: 20px;
 }
 
-h2 {
-  font-size: 14px;
-}
-
-h2,
-span {
-  font-weight: 400;
+.card__subtitle {
+  margin: 0;
   color: #bbb;
+  font-size: 14px;
+  font-weight: 400;
 }
 
-p {
+.card__text {
+  margin: 0;
   font-size: 12px;
 }
 
-ul {
+.list {
   padding: 0;
   margin: 0;
   list-style: none;
-  display: flex;
-  gap: 16px;
 }
 
 .skill {
@@ -70,7 +80,23 @@ ul {
   border-radius: 16px;
 }
 
-a {
+.icon {
   font-size: 20px;
   color: white;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-direction-column {
+  flex-direction: column;
+}
+
+.gap-5xs {
+  gap: 0.5rem;
+}
+
+.gap-md {
+  gap: 2rem;
 }
