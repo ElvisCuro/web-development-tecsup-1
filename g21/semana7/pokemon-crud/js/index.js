@@ -1,13 +1,14 @@
 'use strict';
 
 window.addEventListener('DOMContentLoaded', () => {
-  let pokemons;
+  let pokemons = [];
+  let pokemonId = -1;
 
   const pokemonTBody = document.getElementById('pokemonTBody');
   const pokemonForm = document.forms['pokemonForm'];
+  const actionButton = document.getElementById('actionButton');
 
   const createPokemon = (e) => {
-    e.preventDefault();
     const name = pokemonForm['name'].value;
     const type = pokemonForm['type'].value;
     const image = pokemonForm['image'].value;
@@ -80,11 +81,26 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const readPokemon = (id) => {
+    pokemonId = id;
+    actionButton.textContent = 'Editar';
     const pokemon = pokemons.find((_, index) => index === id);
     const { name, type, image } = pokemon;
     pokemonForm['name'].value = name;
     pokemonForm['type'].value = type;
     pokemonForm['image'].value = image;
+  };
+
+  const updatePokemon = () => {
+    const name = pokemonForm['name'].value;
+    const type = pokemonForm['type'].value;
+    const image = pokemonForm['image'].value;
+
+    pokemons = pokemons.map((element, index) => index !== pokemonId ? element : { name, type, image });
+    localStorage.setItem('pokemonsCrud', JSON.stringify(pokemons));
+    readPokemons();
+    pokemonForm.reset();
+    pokemonId = -1;
+    actionButton.textContent = 'Crear';
   };
 
   const deletePokemon = (id) => {
@@ -135,6 +151,9 @@ window.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('pokemonsCrud', JSON.stringify(pokemons));
   }
 
-  pokemonForm.addEventListener('submit', createPokemon);
+  pokemonForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    pokemonId === -1 ? createPokemon() : updatePokemon();
+  });
   readPokemons();
 });
