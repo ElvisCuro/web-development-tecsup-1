@@ -23,19 +23,21 @@
 .container {
   max-width: 1024px;
   padding-left: 1rem;
-  padding-left: 1rem;
+  padding-right: 1rem;
   margin: 0 auto;
 }
 
 .card {
-  max-width: 320px;
+  /* max-width: 320px; */
   box-shadow: 0 0 16px 0 rgba(255, 255, 255, 0.5);
   border-radius: 16px;
   overflow: hidden;
 }
 
 .card__body {
+  height: 100%;
   padding: 16px;
+  box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(32px);
   display: flex;
@@ -83,6 +85,14 @@
 .icon {
   font-size: 20px;
   color: white;
+}
+
+.g-layout {
+  display: grid;
+}
+
+.g-layout--auto-fit-card {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .d-flex {

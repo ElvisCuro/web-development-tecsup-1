@@ -1,7 +1,8 @@
 [
   {
+    "id": 1,
     "name": "Elliot Garamendi",
-    "year": 27,
+    "age": 27,
     "birthday": "31/01/1996",
     "profession": "Ingeniería de Software",
     "school": "UTP",
@@ -15,18 +16,19 @@
     "description": "Desarrollador Web Frontend con React y Next.js. Docente de especialización en Desarrollo Web Frontend. Apasionado del autoaprendizaje y del código limpio.",
     "expectations": "Aprender mucho de desarrollo Web y que todos terminen",
     "hobbies": "Investigar",
-    "youtube": "elliotgaramendi",
+    "youtube": "@elliotgaramendi",
     "github": "elliotgaramendi",
     "linkedin": "elliotgaramendi",
     "instagram": "elliotgaramendi",
     "facebook": "elliotgaramendi",
     "tiktok": "",
-    "photo": "https://i.postimg.cc/pL3zrqqS/elliot-garamendi-perrito.webp",
+    "image": "https://i.postimg.cc/pL3zrqqS/elliot-garamendi-perrito.webp",
     "other": ""
   },
   {
+    "id": 2,
     "name": "Juan Carlos Ramirez Abanto",
-    "year": 40,
+    "age": 40,
     "birthday": "01/12/1982",
     "profession": "Administrador",
     "school": "UDEP",
@@ -46,12 +48,13 @@
     "instagram": "jcramiezxp",
     "facebook": "jcramirezxp",
     "tiktok": "",
-    "photo": "https://imagenesdepaisajes.org/wp-content/uploads/2016/06/Fotos-Paisajes-Espectaculares-playa.jpg",
+    "image": "https://imagenesdepaisajes.org/wp-content/uploads/2016/06/Fotos-Paisajes-Espectaculares-playa.jpg",
     "other": ""
   },
   {
+    "id": 3,
     "name": "Rónald Valverde",
-    "year": 44,
+    "age": 44,
     "birthday": "17/03/1979",
     "profession": "Ingeniero de Computación y Sistemas",
     "school": "UPAO",
@@ -71,7 +74,7 @@
     "instagram": "",
     "facebook": "ronaldvalverde",
     "tiktok": "",
-    "photo": "https://i.postimg.cc/W3BXZVbG/wp-15.jpg",
+    "image": "https://i.postimg.cc/W3BXZVbG/wp-15.jpg",
     "other": ""
   }
 ]
