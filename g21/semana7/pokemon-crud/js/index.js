@@ -59,10 +59,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
       const actionsTableData = document.createElement('td');
       const deleteButton = document.createElement('button');
-      deleteButton.className = 'btn btn-outline-danger btn-sm';
+      deleteButton.className = 'btn btn-outline-danger btn-sm p-1 m-1';
       deleteButton.textContent = '🗑';
-      deleteButton.addEventListener('click', () => deletePokemon(index))
+      deleteButton.addEventListener('click', () => deletePokemon(index));
+      const editButton = document.createElement('button');
+      editButton.className = 'btn btn-outline-success btn-sm p-1 m-1';
+      editButton.textContent = '✏';
+      editButton.addEventListener('click', () => readPokemon(index));
       actionsTableData.appendChild(deleteButton);
+      actionsTableData.appendChild(editButton);
 
       tableRow.appendChild(idTableData);
       tableRow.appendChild(nameTableData);
@@ -72,6 +77,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
       pokemonTBody.appendChild(tableRow);
     });
+  };
+
+  const readPokemon = (id) => {
+    const pokemon = pokemons.find((_, index) => index === id);
+    const { name, type, image } = pokemon;
+    pokemonForm['name'].value = name;
+    pokemonForm['type'].value = type;
+    pokemonForm['image'].value = image;
   };
 
   const deletePokemon = (id) => {
@@ -89,7 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
       icon: 'warning',
       showCancelButton: true,
       confirmButtonText: '¡Sí, elimínalo!',
-      cancelButtonText: 'No, cancélalo!',
+      cancelButtonText: '¡No, cancélalo!',
       reverseButtons: true
     }).then((result) => {
       if (result.isConfirmed) {
