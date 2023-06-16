@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
         studentCards.innerHTML += `
           <div class="card" key=${index}>
             <div class="card__body">
-              <img src="${image}" alt="${name}" width="128"
+              <img src="${image || 'https://emojitool.com/img/whatsapp/2.20.198.15/boar-1943.png'}" alt="${name}" width="128"
                 height="128" class="card__img" />
               <h2 class="card__title">
                 ${name}
