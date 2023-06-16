@@ -6,15 +6,15 @@ window.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       const studentCards = document.getElementById('studentCards');
       data.forEach((element, index) => {
-        const {photo, name, year, keywords, location, description, technologies, youtube, github, linkedin, instagram} = element;
+        const {image, name, age, keywords, location, description, technologies, youtube, github, linkedin, instagram} = element;
         studentCards.innerHTML += `
           <div class="card" key=${index}>
             <div class="card__body">
-              <img src="${photo}" alt="${name}" width="128"
+              <img src="${image}" alt="${name}" width="128"
                 height="128" class="card__img" />
               <h2 class="card__title">
                 ${name}
-                <sup>${year}</sup>
+                <sup>${age}</sup>
               </h2>
               <h3 class="card__subtitle">${keywords}</h3>
               <span class="card__subtitle"><i class="bi bi-geo-alt"></i> ${location} <i class="bi bi-geo-alt"></i></span>

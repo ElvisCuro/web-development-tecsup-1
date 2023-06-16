@@ -76,5 +76,31 @@
     "tiktok": "",
     "image": "https://i.postimg.cc/W3BXZVbG/wp-15.jpg",
     "other": ""
+  },
+  {
+    "id": 4,
+    "name": "Eleazar Caqui",
+    "age": 24,
+    "birthday": "31/01/1999",
+    "profession": "Computación e Informática",
+    "school": "IESTP-San Marcos",
+    "reason": "Me gusta la ternológia",
+    "skill": "junior",
+    "developer": "FullStack",
+    "keywords": "👨‍💻Desarrollador👨‍💻 | 🌌FullStack🌌 ​",
+    "technologies": "Java, Mysql, Mongodb",
+    "language": "Php, JavaScrit",
+    "location": "Lima, Perú",
+    "description": "Desarrollador con una pasión de investigar de nueva tecnologias de Programacion",
+    "expectations": "Ser un buen Desarrollador FullStack",
+    "hobbies": "Investigar, viajar",
+    "youtube": "EleazarCaqui",
+    "github": "EleazarCaqui",
+    "linkedin": "EleazarCaqui",
+    "instagram": "EleazarCaqui",
+    "facebook": "EleazarCaqui",
+    "tiktok": "",
+    "image": "./img/My project-1.png",
+    "other": ""
   }
 ]
