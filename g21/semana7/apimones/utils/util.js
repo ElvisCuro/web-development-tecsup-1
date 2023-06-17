@@ -1,42 +1,5 @@
-export const setLoading = (state) => {
-  if (state) {
-    document.getElementById('spinner').classList.add('spinner--show');
-  } else {
-    document.getElementById('spinner').classList.remove('spinner--show');
-  }
-};
-
-// export const fetchApi = async (url) => {
-//   setLoading(true);
-//   try {
-//     const response = await fetch(url, { method: 'GET' });
-//     const data = await response.json();
-//     return data;
-//   } catch (error) {
-//     console.log(error);
-//   } finally {
-//     setLoading(false);
-//   }
-// };
-
-export const fetchApi = async (...urls) => {
-  setLoading(true);
-  try {
-    const promises = urls.map(async (url) => {
-      const response = await fetch(url);
-      const data = await response.json();
-      return data;
-    });
-    return Promise.all(promises);
-  } catch (error) {
-    console.log(error);
-  } finally {
-    setLoading(false);
-  }
-};
-
-export const renderCard = (domElement, pokemon) => {
-  domElement.insertAdjacentHTML('beforeend', `
+export const renderPokemonCard = (element, pokemon) => {
+  element.insertAdjacentHTML('beforeend', `
     <div class="pokemon__card">
       <header class="pokemon__header">
         <img src="./img/bg-pattern-card.svg" alt="Header card image" class="pokemon__header-image">
