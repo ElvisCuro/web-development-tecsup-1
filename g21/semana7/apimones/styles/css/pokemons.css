@@ -15,11 +15,15 @@
 .pokemons__title {
   grid-area: pokemons-title;
   text-align: center;
-  font-size: 1.75rem;
+  font-size: 1.25rem;
   margin: 0;
 }
 
 @media (min-width: 854px) {
+  .pokemons__title {
+    font-size: 1.75rem;
+  }
+
   .pokemons__container {
     display: grid;
     grid-template-columns: 1fr 1fr;

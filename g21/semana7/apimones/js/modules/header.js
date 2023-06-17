@@ -27,7 +27,6 @@ const header = () => {
   headerNavMenuCloseIconContainer.addEventListener('click', closeMenu);
   headerNavMenuLinkList.addEventListener('click', e => e.target.tagName === 'A' && closeMenu());
 
-  console.log(localStorage.getItem('darkMode'));
   if (localStorage.getItem('darkMode') === 'true' || localStorage.getItem('darkMode') === null) {
     document.body.classList.remove('body--light');
     headerNavThemeIconContainer.classList.remove('header-nav__theme-icon-container--active');
