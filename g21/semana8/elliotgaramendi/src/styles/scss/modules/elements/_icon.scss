@@ -1,0 +1,9 @@
+.icon {
+  all: unset;
+  display: flex;
+  font-size: 2rem;
+
+  & i {
+    display: flex;
+  }
+}

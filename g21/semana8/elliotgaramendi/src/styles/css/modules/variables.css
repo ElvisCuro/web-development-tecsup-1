@@ -1,5 +1,15 @@
 :root {
+  --primary-max-width: 512px;
+  --primary-element-spacing: 1.5rem;
   --primary-theme-color: #087ea6;
   --primary-background-color: #16181d;
   --primary-text-color: #f7f8f9;
+  --light-primary-shadow-color: #00000080;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --primary-max-width: 1024px;
+    --primary-element-spacing: 2rem;
+  }
 }

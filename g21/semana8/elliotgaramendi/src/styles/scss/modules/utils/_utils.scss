@@ -1,0 +1,49 @@
+.h-100 {
+  height: 100%;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.a-items-center {
+  align-items: center;
+}
+
+.gap-6xs {
+  gap: calc(var(--primary-element-spacing) * 0.125);
+}
+
+.gap-5xs {
+  gap: calc(var(--primary-element-spacing) * 0.25);
+}
+
+.gap-4xs {
+  gap: calc(var(--primary-element-spacing) * 0.375);
+}
+
+.gap-3xs {
+  gap: calc(var(--primary-element-spacing) * 0.5);
+}
+
+.gap-2xs {
+  gap: calc(var(--primary-element-spacing) * 0.625);
+}
+
+.gap-xs {
+  gap: calc(var(--primary-element-spacing) * 0.75);
+}
+
+.gap-sm {
+  gap: calc(var(--primary-element-spacing) * 0.875);
+}
+
+.gap-md {
+  gap: var(--primary-element-spacing);
+}
+
+@media (min-width: 768px) {
+  .md\:d-none {
+    display: none;
+  }
+}

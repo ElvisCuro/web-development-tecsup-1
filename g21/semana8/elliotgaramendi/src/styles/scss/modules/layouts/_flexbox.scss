@@ -1,0 +1,21 @@
+.flexbox {
+  display: flex;
+
+  &--header {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &--center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--responsive {
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+}

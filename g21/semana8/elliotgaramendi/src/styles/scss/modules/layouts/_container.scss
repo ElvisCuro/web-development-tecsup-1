@@ -1,0 +1,6 @@
+.container {
+  max-width: var(--primary-max-width);
+  padding-right: calc(var(--primary-element-spacing) * 0.75);
+  padding-left: calc(var(--primary-element-spacing) * 0.75);
+  margin: 0 auto;
+}
