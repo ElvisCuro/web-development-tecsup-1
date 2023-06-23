@@ -1,9 +1,11 @@
 :root {
   --primary-max-width: 512px;
   --primary-element-spacing: 1.5rem;
+  --primary-border-radius: 1rem;
   --primary-theme-color: #087ea6;
   --primary-background-color: #16181d;
   --primary-text-color: #f7f8f9;
+  --dark-primary-text-color: #f7f8f9;
   --light-primary-shadow-color: #00000040;
 }
 

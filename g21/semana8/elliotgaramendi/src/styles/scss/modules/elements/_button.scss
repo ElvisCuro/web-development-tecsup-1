@@ -1,0 +1,47 @@
+.button {
+  --button-border-color: var(--primary-background-color);
+  --button-background-color: var(--primary-background-color);
+  --button-text-color: var(--primary-text-color);
+  all: unset;
+  padding: 0.5em 2em;
+  border: 0.125rem solid var(--button-border-color);
+  border-radius: var(--primary-border-radius);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  display: inline-flex;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: box-shadow 0.25s, background-color 0.25s, color 0.25s, filter 0.25s;
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0.125rem 0.0625rem var(--button-background-color);
+    filter: brightness(1.125);
+  }
+
+  &:hover[class*="button--outline-"] {
+    --button-text-color: var(--dark-primary-text-color);
+    background-color: var(--button-background-color);
+
+    & span[class*="color-"] {
+      color: var(--dark-primary-text-color);
+    }
+  }
+
+  &--primary {
+    --button-border-color: var(--primary-theme-color);
+    --button-background-color: var(--primary-theme-color);
+    --button-text-color: var(--dark-primary-text-color);
+  }
+
+  &--outline-primary {
+    background-color: transparent;
+    --button-border-color: var(--primary-theme-color);
+    --button-background-color: var(--primary-theme-color);
+    --button-text-color: var(--primary-text-color);
+  }
+}
