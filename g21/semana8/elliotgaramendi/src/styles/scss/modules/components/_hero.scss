@@ -1,0 +1,19 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding-top: var(--primary-element-spacing);
+  padding-bottom: var(--primary-element-spacing);
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--light-primary-shadow-color);
+  }
+}

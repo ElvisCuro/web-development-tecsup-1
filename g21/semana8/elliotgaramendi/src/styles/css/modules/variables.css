@@ -4,7 +4,7 @@
   --primary-theme-color: #087ea6;
   --primary-background-color: #16181d;
   --primary-text-color: #f7f8f9;
-  --light-primary-shadow-color: #00000080;
+  --light-primary-shadow-color: #00000040;
 }
 
 @media (min-width: 768px) {
