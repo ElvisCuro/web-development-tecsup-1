@@ -20,7 +20,7 @@ function App() {
       <Header data={header} />
       <main>
         <div className="container">
-          <div className="row">
+          <div className="row justify-content-between">
             <Form />
           </div>
         </div>
