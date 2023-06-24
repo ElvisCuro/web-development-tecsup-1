@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from './sections/Footer';
 import Header from './sections/Header';
 
 function App() {
@@ -7,8 +8,17 @@ function App() {
     subtitle: '🐭Porque es parte de nuestra familia, lo cuidamos.🐭'
   };
 
+  const footer = {
+    title: 'Patita Feliz',
+    year: new Date().getFullYear(),
+    author: 'Elliot Garamendi'
+  };
+
   return (
-    <Header data={header} />
+    <>
+      <Header data={header} />
+      <Footer data={footer} />
+    </>
   );
 }
 
