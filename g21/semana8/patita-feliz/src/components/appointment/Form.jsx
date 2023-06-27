@@ -78,7 +78,10 @@ const Form = () => {
                   <small>📆 {date} 🕤 {hour}</small>
                 </div>
                 <p className="mb-1">Síntomas: {symptoms} 🩺</p>
-                <small>Dueño: {ownerName} 🤗</small>
+                <div className="d-flex align-items-center justify-content-between">
+                  <small>Dueño: {ownerName} 🤗</small>
+                  <a href={`https://api.whatsapp.com/send?phone=51963640765&text=Mascota: ${petName}; ${date} ${hour}; Síntomas: ${symptoms}; Dueño: ${ownerName}`} target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-sm">Confirmar</a>
+                </div>
               </li>
             );
           })}
