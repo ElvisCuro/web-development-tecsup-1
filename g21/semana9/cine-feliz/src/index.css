@@ -1,0 +1,10 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+.body {
+  background-color: #16181d;
+  color: #f7f8f9;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

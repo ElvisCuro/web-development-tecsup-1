@@ -7,10 +7,12 @@ const Movies = () => {
 
   const handlePreviusClick = () => {
     setPage(page - 1);
+    window.scroll(0, 0);
   }
 
   const handleNextClick = () => {
     setPage(page + 1);
+    window.scroll(0, 0);
   }
 
   useEffect(() => {
@@ -30,21 +32,26 @@ const Movies = () => {
   }, [page]);
 
   return (
-    <section>
-      <div>
-        <h2>Películas</h2>
-        {page > 1 && <button onClick={handlePreviusClick}>Atrás</button>}
-        <button onClick={handleNextClick}>Siguiente</button>
-        <div>
+    <section className="section">
+      <div className="container section__container">
+        <h2 className="subtitle">Películas</h2>
+        <div className="movies">
           {movies.map(element => {
             const { id, title, poster_path } = element;
             return (
-              <div key={id}>
-                <img src={'https://image.tmdb.org/t/p/w300' + poster_path} alt={title} width={220} height={330} />
-                <h4>{title}</h4>
+              <div
+                key={id}
+                className="card"
+              >
+                <img src={'https://image.tmdb.org/t/p/w300' + poster_path} alt={title} width={220} height={330} className="card__img" />
+                <h4 className="card__title">{title}</h4>
               </div>
             );
           })}
+        </div>
+        <div className="action">
+          {page > 1 && <button onClick={handlePreviusClick} className="action__button">Atrás</button>}
+          <button onClick={handleNextClick} className="action__button">Siguiente</button>
         </div>
       </div>
     </section>
