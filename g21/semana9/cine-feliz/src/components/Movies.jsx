@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 const Movies = () => {
-
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(1);
 
@@ -14,6 +13,18 @@ const Movies = () => {
     setPage(page + 1);
     window.scroll(0, 0);
   }
+
+  const convertToStars = (rating) => {
+    let stars = '';
+    let wholeStars = Math.floor(rating / 2);
+    let halfStar = (rating / 2) - wholeStars;
+    for (let index = 0; index < wholeStars; index++) {
+      stars += '⭐';
+    }
+    (halfStar > 0) && (stars += '✨')
+
+    return stars;
+  };
 
   useEffect(() => {
     const fetchApi = async () => {
@@ -33,18 +44,22 @@ const Movies = () => {
 
   return (
     <section className="section">
-      <div className="container section__container">
+      <div className="container container--section">
         <h2 className="subtitle">Películas</h2>
         <div className="movies">
           {movies.map(element => {
-            const { id, title, poster_path } = element;
+            const { id, title, poster_path, release_date, vote_average } = element;
             return (
               <div
                 key={id}
                 className="card"
               >
                 <img src={'https://image.tmdb.org/t/p/w300' + poster_path} alt={title} width={220} height={330} className="card__img" />
-                <h4 className="card__title">{title}</h4>
+                <div className="card__overlay">
+                  <h4 className="card__subtitle">{release_date}</h4>
+                  <h5 className="card__title">{title}</h5>
+                  <h6 className="card__subtitle">{convertToStars(vote_average)} {vote_average}</h6>
+                </div>
               </div>
             );
           })}
