@@ -44,7 +44,7 @@ const Movies = () => {
   }, [page]);
 
   return (
-    <section className="section">
+    <section className="section section--lg">
       <div className="container container--section">
         <h2 className="subtitle">Películas</h2>
         <div className="movies">

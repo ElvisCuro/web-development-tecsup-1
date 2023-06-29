@@ -44,27 +44,43 @@ const MovieDetail = () => {
   return (
     <>
       <section className="hero">
-        <img src={`https://image.tmdb.org/t/p/w1280${backdrop_path}`} alt="" width="1280" height="720" />
+        <img src={`https://image.tmdb.org/t/p/w1280${backdrop_path}`} alt="" width="1280" height="720" className="img img--background" />
       </section>
       <section className="section">
-        <div className="container">
-          <h1>{original_title} <sub>{tagline}</sub></h1>
-          <span>{convertToStars(vote_average)} {vote_average}</span>
-          <h2>{convertMinutesToHours(runtime)} I {release_date} I {original_language} {homepage ?? `I ${<a href={homepage} target="_blank" rel="noopener noreferrer">🌐</a>}`}</h2>
-          <ul>
-            {genres === undefined || genres.map(element => <li key={element.id}>{element.name}</li> ?? 'null')}
-          </ul>
-          <p>{overview}</p>
+        <div className="container container--movie-detail">
+          <header>
+            <h1 className="title">{original_title} <span className="title--sm">{tagline}</span></h1>
+            <h2 className="subtitle subtitle--sm">{convertMinutesToHours(runtime)} I {release_date} I {original_language} {homepage ?? `I ${<a href={homepage} target="_blank" rel="noopener noreferrer">🌐</a>}`}</h2>
+            <h3 className="subtitle subtitle--sm">{convertToStars(vote_average)} {vote_average}</h3>
+            <ul className="list">
+              {genres === undefined || genres.map(element => <li key={element.id} className="list__item">{element.name}</li> ?? 'null')}
+            </ul>
+          </header>
+          <div>
+            <h4 className="title title--sm t-align-start">Sinopsis</h4>
+            <p className="text">{overview}</p>
+          </div>
           <ul>
             {production_companies === undefined || production_companies.map(element => <img key={element.id} src={`https://image.tmdb.org/t/p/w92${element.logo_path}`} alt={element.name} /> ?? 'null')}
           </ul>
-          <ul>
-            {production_countries === undefined || production_countries.map((element, index) => <li key={index}>{element.name}</li> ?? 'null')}
-          </ul>
-          <ul>
-            {spoken_languages === undefined || spoken_languages.map((element, index) => <li key={index}>{element.name}</li> ?? 'null')}
-          </ul>
-          <h3>Presupuesto: {budget} I Recaudación: {revenue}</h3>
+          <div>
+            <h4 className="title title--sm t-align-start">Países de producción</h4>
+            <ul className="list">
+              {production_countries === undefined || production_countries.map((element, index) => <li key={index} className="list__item">{element.name}</li> ?? 'null')}
+            </ul>
+          </div>
+          <div>
+            <h4 className="title title--sm t-align-start">Lenguajes hablados</h4>
+            <ul className="list">
+              {spoken_languages === undefined || spoken_languages.map((element, index) => <li key={index} className="list__item">{element.name}</li> ?? 'null')}
+            </ul>
+          </div>
+          <div>
+            <h4 className="title title--sm t-align-start">Balance</h4>
+            <div className="action">
+              <h3>Presupuesto: <button>{budget}</button> I Recaudación:  <button>{revenue}</button></h3>
+            </div>
+          </div>
         </div>
       </section>
     </>
