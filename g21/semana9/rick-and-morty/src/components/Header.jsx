@@ -16,9 +16,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed z-50 top-0 left-0 w-full shadow-sm shadow-gray-50">
+    <header className="fixed z-50 top-0 left-0 w-full bg-black/50 shadow-sm shadow-gray-50">
       <nav className="py-2">
-        <div className="container mx-auto px-2 flex items-center justify-between">
+        <div className="container px-2 mx-auto flex items-center justify-between">
           <a href="#hero">
             <svg className="w-12 h-12 object-cover" width="48" height="48" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_1907_6)">
