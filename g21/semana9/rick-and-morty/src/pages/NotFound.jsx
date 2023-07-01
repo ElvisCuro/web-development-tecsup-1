@@ -7,7 +7,7 @@ const NotFound = () => {
     <section className="not-found">
       <div className="not-found__container">
         <h1>404</h1>
-        <h2>{routeError.statusText}</h2>
+        <h2>{routeError.statusText || routeError.message}</h2>
         <Link to="/">Página de inicio</Link >
       </div>
     </section>

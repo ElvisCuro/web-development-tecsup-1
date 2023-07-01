@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
 
@@ -34,7 +34,7 @@ const Header = () => {
             {links.map((element, index) => {
               return (
                 <li key={index}>
-                  <Link to={element.href} className="font-semibold transition-colors hover:text-teal-500">{element.content}</Link>
+                  <NavLink to={element.href} className={({ isActive }) => `font-semibold transition-colors hover:text-teal-500 ${isActive ? 'text-teal-500' : ''}`}>{element.content}</NavLink>
                 </li>
               );
             })}
