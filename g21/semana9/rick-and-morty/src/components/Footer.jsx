@@ -1,10 +1,8 @@
-import React from "react";
-
 const Footer = () => {
   return (
     <>
       <footer className="relative z-10 pt-20 pb-10 lg:pt-[120px] lg:pb-20 mt-auto">
-        <div className="container mx-auto">
+        <div className="container px-2 mx-auto flex flex-col gap-6">
           <div className="flex flex-wrap">
             <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
               <div className="w-full mb-10">

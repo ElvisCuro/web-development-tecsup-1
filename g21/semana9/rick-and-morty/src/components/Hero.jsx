@@ -8,8 +8,8 @@ const Hero = () => {
         height={1080}
         className="absolute -z-10 top-0 left-0 w-full h-full object-cover"
       />
-      <div className="container mx-auto">
-        <h1 className="relative text-4xl text-center font-black">Rick y Morty</h1>
+      <div className="container px-2 mx-auto">
+        <h1 className="relative text-5xl text-center font-black">Rick y Morty</h1>
       </div>
     </section>
   );

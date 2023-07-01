@@ -21,8 +21,8 @@ const Categories = () => {
 
   return (
     <section className="py-8">
-      <div className="container p-2 mx-auto flex flex-col gap-6">
-        <h2 className="text-teal-500 font-extrabold text-3xl text-center transition-colors hover:text-amber-200">Categorías</h2>
+      <div className="container px-2 mx-auto flex flex-col gap-6">
+        <h2 className="text-teal-500 font-extrabold text-4xl text-center transition-colors hover:text-amber-200">Categorías</h2>
         <div className="grid grid-cols-[repeat(auto-fit,_minmax(256px,_1fr))] place-items-center place-content-center gap-6">
           {categories.map((element, index) => {
             const { title, href, img } = element;
@@ -39,8 +39,8 @@ const Categories = () => {
                   height={512}
                   className="w-full h-64 object-cover"
                 />
-                <div className="bg-black/50 p-4">
-                  <h3 className="text-xl font-bold text-center">{title}</h3>
+                <div className="bg-sky-900 p-4">
+                  <h3 className="text-2xl font-bold text-center">{title}</h3>
                 </div>
               </Link>
             );
