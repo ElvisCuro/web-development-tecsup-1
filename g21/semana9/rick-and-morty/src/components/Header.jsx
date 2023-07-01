@@ -1,16 +1,18 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
 
   const links = [
     {
-      href: '#characters',
+      href: '/personajes',
       content: 'Personajes'
     },
     {
-      href: '#locations',
+      href: '/ubicaciones',
       content: 'Ubicaciones'
     },
     {
-      href: '#episodes',
+      href: '/episodios',
       content: 'Episodios'
     }
   ];
@@ -19,7 +21,7 @@ const Header = () => {
     <header className="fixed z-50 top-0 left-0 w-full bg-black/50 shadow-sm shadow-gray-50">
       <nav className="py-2">
         <div className="container px-2 mx-auto flex items-center justify-between">
-          <a href="#hero">
+          <Link to="/">
             <svg className="w-12 h-12 object-cover" width="48" height="48" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clipPath="url(#clip0_1907_6)">
                 <path
@@ -27,12 +29,12 @@ const Header = () => {
                   fill="#f9fafb" />
               </g>
             </svg>
-          </a>
+          </Link>
           <ul className="flex gap-2">
             {links.map((element, index) => {
               return (
                 <li key={index}>
-                  <a href={element.href} className="font-semibold transition-colors hover:text-teal-500">{element.content}</a>
+                  <Link to={element.href} className="font-semibold transition-colors hover:text-teal-500">{element.content}</Link>
                 </li>
               );
             })}
