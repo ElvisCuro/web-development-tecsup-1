@@ -1,11 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import PrimaryLayout from "../layouts/primaryLayout";
+import NotFound from "../pages/NotFound";
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <PrimaryLayout />,
+    errorElement: <NotFound />,
     children: [
       {
         index: true,
