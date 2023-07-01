@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
       {
         path: '/episodios',
         element: <h1 style={{ padding: '5rem' }}>Episodios</h1>
-      },
+      }
     ]
   },
 ]);
