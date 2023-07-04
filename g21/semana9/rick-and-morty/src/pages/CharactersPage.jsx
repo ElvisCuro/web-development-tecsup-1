@@ -2,7 +2,6 @@ import { Link, useLoaderData } from "react-router-dom";
 
 const CharactersPage = () => {
   const data = useLoaderData();
-  console.log(data);
 
   return (
     <section className="py-20">
@@ -17,7 +16,8 @@ const CharactersPage = () => {
                 className="rounded-2xl overflow-hidden flex flex-col"
               >
                 <Link
-                  to={url}
+                  to={`/personajes/${id}`}
+                // to={`${id}`}
                 >
                   <img
                     src={image}

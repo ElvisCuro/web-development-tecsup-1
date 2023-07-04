@@ -1,9 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import PrimaryLayout from "../layouts/primaryLayout";
+import CharacterPage from "../pages/CharacterPage";
 import CharactersPage from "../pages/CharactersPage";
 import NotFoundPage from "../pages/NotFoundPage";
-import { readCharacters } from "../services/charactersService";
+import { readCharacter, readCharacters } from "../services/charactersService";
 
 export const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ export const router = createBrowserRouter([
         path: 'personajes',
         element: <CharactersPage />,
         loader: readCharacters
+      },
+      {
+        path: 'personajes/:id',
+        element: <CharacterPage />,
+        loader: readCharacter
       },
       {
         path: 'ubicaciones',
