@@ -5,6 +5,7 @@ import CharacterPage from "../pages/CharacterPage";
 import CharactersPage from "../pages/CharactersPage";
 import NotFoundPage from "../pages/NotFoundPage";
 import { readCharacter, readCharacters } from "../services/charactersService";
+import { readCategories } from "../services/homepageService";
 
 export const router = createBrowserRouter([
   {
@@ -14,7 +15,8 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <App />
+        element: <App />,
+        loader: readCategories
       },
       {
         path: 'personajes',
@@ -35,5 +37,5 @@ export const router = createBrowserRouter([
         element: <h1 style={{ padding: '5rem' }}>Episodios</h1>
       }
     ]
-  },
+  }
 ]);

@@ -17,7 +17,6 @@ const CharactersPage = () => {
               >
                 <Link
                   to={`/personajes/${id}`}
-                // to={`${id}`}
                 >
                   <img
                     src={image}
