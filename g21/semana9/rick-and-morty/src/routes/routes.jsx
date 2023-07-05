@@ -8,6 +8,7 @@ import { readCharacter, readCharacters } from "../services/charactersService";
 import { readCategories } from "../services/homepageService";
 import LocationsPage from "../pages/LocationsPage";
 import { readLocations } from "../services/LocationsService";
+import EpisodesPages from "../pages/EpisodesPages";
 
 export const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'episodios',
-        element: <h1 style={{ padding: '5rem' }}>Episodios</h1>
+        element: <EpisodesPages />
       }
     ]
   }
