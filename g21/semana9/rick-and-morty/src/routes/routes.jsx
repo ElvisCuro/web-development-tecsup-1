@@ -9,6 +9,7 @@ import { readCategories } from "../services/homepageService";
 import LocationsPage from "../pages/LocationsPage";
 import { readLocations } from "../services/LocationsService";
 import EpisodesPages from "../pages/EpisodesPages";
+import { readEpisodes } from "../services/EpisodesService";
 
 export const router = createBrowserRouter([
   {
@@ -38,7 +39,8 @@ export const router = createBrowserRouter([
       },
       {
         path: 'episodios',
-        element: <EpisodesPages />
+        element: <EpisodesPages />,
+        loader: readEpisodes
       }
     ]
   }

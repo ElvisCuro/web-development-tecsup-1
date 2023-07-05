@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -65,3 +66,7 @@ const Categories = ({ data }) => {
 };
 
 export default Categories;
+
+Categories.propTypes = {
+  data: PropTypes.object
+};
