@@ -7,6 +7,7 @@ import NotFoundPage from "../pages/NotFoundPage";
 import { readCharacter, readCharacters } from "../services/charactersService";
 import { readCategories } from "../services/homepageService";
 import LocationsPage from "../pages/LocationsPage";
+import { readLocations } from "../services/LocationsService";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,8 @@ export const router = createBrowserRouter([
       },
       {
         path: 'ubicaciones',
-        element: <LocationsPage />
+        element: <LocationsPage />,
+        loader: readLocations
       },
       {
         path: 'episodios',
