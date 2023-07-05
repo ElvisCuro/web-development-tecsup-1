@@ -1,4 +1,7 @@
+import PropTypes from "prop-types";
+
 const SectionWrapper = ({ children }) => {
+  console.log(children)
   return (
     <section className="py-20">
       <div className="container px-2 mx-auto flex flex-col gap-8">
@@ -9,3 +12,7 @@ const SectionWrapper = ({ children }) => {
 };
 
 export default SectionWrapper;
+
+SectionWrapper.propTypes = {
+  children: PropTypes.node
+};
