@@ -3,7 +3,7 @@ import { formatCurrency } from "../utils/utils";
 const Products = ({ data }) => {
   console.log(data);
   return (
-    <ul className="grid grid-cols-[repeat(auto-fit,_minmax(256px,_1fr))] gap-6">
+    <ul className="grid grid-cols-[repeat(auto-fill,_minmax(256px,_1fr))] gap-6">
       {data.map(element => {
         const { id, title, price, discountPercentage, rating, brand, thumbnail } = element;
         return (
