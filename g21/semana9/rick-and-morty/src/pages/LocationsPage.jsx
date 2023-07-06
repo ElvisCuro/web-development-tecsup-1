@@ -8,7 +8,7 @@ const LocationsPage = () => {
   return (
     <SectionWrapper>
       <h1 className="text-teal-500 font-extrabold text-3xl text-center transition-colors hover:text-amber-200">Ubicaciones</h1>
-      <div className="grid grid-cols-[repeat(auto-fit,_minmax(256px,_1fr))]  gap-6">
+      <div className="grid grid-cols-[repeat(auto-fit,_minmax(256px,_1fr))] gap-6">
         {data.results !== undefined && data.results.map(element => {
           const { id, name, type, dimension, url, created } = element;
           return (
