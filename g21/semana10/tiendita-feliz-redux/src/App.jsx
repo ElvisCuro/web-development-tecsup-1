@@ -1,10 +1,17 @@
-import './App.css'
+import './App.css';
+import CounterActions from './components/CounterActions';
+import CounterValueWrapper from './components/CounterValueWrapper';
 
 function App() {
-
   return (
     <>
-      Tiendita Feliz Redux
+      <header>
+        <h1>
+          Tiendita Feliz Redux
+        </h1>
+        <CounterActions />
+        <CounterValueWrapper />
+      </header>
     </>
   )
 }
