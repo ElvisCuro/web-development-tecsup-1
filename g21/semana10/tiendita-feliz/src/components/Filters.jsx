@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Filters = ({ setFilters, categories }) => {
   const [minPrice, setMinPrice] = useState(0);
-  const [category, setCategory] = useState('');
+  const [category, setCategory] = useState('all');
 
   const handleMinPriceChange = (e) => {
     setMinPrice(e.target.value);
@@ -27,7 +27,6 @@ const Filters = ({ setFilters, categories }) => {
         <input
           type="range"
           name="price"
-          id="price"
           min={0}
           max={1500}
           onChange={handleMinPriceChange}
@@ -38,7 +37,7 @@ const Filters = ({ setFilters, categories }) => {
       <div className="flex items-center gap-2">
         <label htmlFor="category">Categoría: </label>
         <select
-          id="category"
+          name="category"
           className="border rounded-lg bg-zinc-900"
           onChange={handleCategoryChange}
           value={category}

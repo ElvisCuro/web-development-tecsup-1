@@ -6,7 +6,7 @@ import { products as initialProducts } from './mocks/products.json';
 
 function App() {
   const [categories, setCategories] = useState([]);
-  const [products, setProducts] = useState(initialProducts);
+  const [products, setProducts] = useState([]);
   const [filters, setFilters] = useState({
     minPrice: 0,
     category: 'all'
@@ -15,9 +15,9 @@ function App() {
   const filterProducts = (data) => {
     return data.filter(element => {
       return (
-        element.price * ((100 - element.discountPercentage) / 100) >= filters.minPrice && (
+        element.attributes.price * ((100 - element.attributes.discountPercentage) / 100) >= filters.minPrice && (
           filters.category === 'all' ||
-          element.category === filters.category
+          element.attributes.category === filters.category
         )
       );
     });
@@ -30,6 +30,12 @@ function App() {
       categories.includes(element.category) === false && categories.push(element.category)
       return categories;
     }, []));
+
+    fetch('http://localhost:1337/api/products?populate=thumbnail')
+      .then(response => response.json())
+      .then(data => {
+        setProducts(data.data)
+      });
   }, []);
 
   return (

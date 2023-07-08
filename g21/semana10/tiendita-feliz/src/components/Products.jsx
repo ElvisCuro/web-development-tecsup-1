@@ -1,18 +1,17 @@
 import { formatCurrency } from "../utils/utils";
 
 const Products = ({ data }) => {
-  console.log(data);
   return (
     <ul className="grid grid-cols-[repeat(auto-fill,_minmax(256px,_1fr))] gap-6">
       {data.map(element => {
-        const { id, title, price, discountPercentage, rating, brand, thumbnail } = element;
+        const { title, price, discountPercentage, rating, brand, thumbnail } = element.attributes;
         return (
           <li
-            key={id}
+            key={element.id}
             className="rounded-2xl overflow-hidden transition-shadow hover:shadow-xl hover:shadow-sky-600"
           >
             <img
-              src={thumbnail}
+              src={'http://localhost:1337' + thumbnail.data.attributes.url}
               alt={title}
               width={256}
               height={256}
