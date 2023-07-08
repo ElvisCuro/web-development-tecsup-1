@@ -7,6 +7,7 @@ const CounterActions = () => {
   const handleDecrementClick = () => {
     dispatch(decrement());
   };
+
   const handleIncrementClick = () => {
     dispatch(increment());
   };

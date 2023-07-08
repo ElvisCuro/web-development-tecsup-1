@@ -1,7 +1,7 @@
-import { useSelector } from "react-redux";
+import useCounter from "../hooks/useCounter";
 
 const CounterValue = () => {
-  const { value } = useSelector(state => state.counter);
+  const { value } = useCounter();
 
   return (
     <span>{value}</span>
