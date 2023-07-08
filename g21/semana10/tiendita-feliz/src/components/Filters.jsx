@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Filters = ({ setFilters }) => {
+const Filters = ({ setFilters, categories }) => {
   const [minPrice, setMinPrice] = useState(0);
   const [category, setCategory] = useState('');
 
@@ -44,8 +44,9 @@ const Filters = ({ setFilters }) => {
           value={category}
         >
           <option value="all">Todos</option>
-          <option value="laptops">Laptops</option>
-          <option value="smartphones">Celulares</option>
+          {categories.map((element, index) => (
+            <option key={index} value={element}>{element}</option>
+          ))}
         </select>
       </div>
     </div>
