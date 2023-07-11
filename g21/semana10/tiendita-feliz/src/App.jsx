@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './App.css'
+import './App.css';
 import Header from './components/Header';
 import Products from './components/Products';
 import { products as initialProducts } from './mocks/products.json';
@@ -30,12 +30,6 @@ function App() {
       categories.includes(element.category) === false && categories.push(element.category)
       return categories;
     }, []));
-
-    fetch('http://localhost:1337/api/products?populate=thumbnail')
-      .then(response => response.json())
-      .then(data => {
-        setProducts(data.data)
-      });
   }, []);
 
   return (
@@ -46,7 +40,7 @@ function App() {
       />
       <section className='py-12'>
         <div className="container px-4 mx-auto">
-          <Products data={filteredProducts} />
+          <Products />
         </div>
       </section>
     </>

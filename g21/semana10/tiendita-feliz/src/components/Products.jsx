@@ -1,9 +1,13 @@
+import { useContext } from "react";
+import { ProductsContext } from "../context/ProductsContext";
 import { formatCurrency } from "../utils/utils";
 
-const Products = ({ data }) => {
+const Products = () => {
+  const { products } = useContext(ProductsContext);
+
   return (
     <ul className="grid grid-cols-[repeat(auto-fill,_minmax(256px,_1fr))] gap-6">
-      {data.map(element => {
+      {products.map(element => {
         const { title, price, discountPercentage, rating, brand, thumbnail } = element.attributes;
         return (
           <li
